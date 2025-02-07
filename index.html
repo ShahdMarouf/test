@@ -1,0 +1,64 @@
+ <!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet"href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css"/>
+    <link rel="stylesheet" href="../css/style.css" />
+    <link rel="stylesheet" href="../css/bootstrap.min.css" />
+
+
+</head>
+<body>
+    <div class="container mt-5">
+       <h1 class="text-center fw-bolder mb-5">Bookmarker</h1>
+       <hr class="">
+       <h2 class="text-center text-success fw-bold"><i class="fa-solid fa-bookmark me-2"></i>Bookmark your favorite sites<i class="fa-solid fa-bookmark ms-2"></i></h2>
+        
+
+      <div class=" card p-4 shadow-sm border-0">
+        <form action="">
+         <div class="mb-3">
+            <label for="bookmarkName" class=" mb-2 fw-bold">
+                <i class="fa-solid fa-book-bookmark me-2"></i>Site Name
+              </label>
+              <input type="text" class="form-control" id="bookmarkName" placeholder="Bookmark Name" required>
+         </div>
+         <div class="mb-3">
+            <label for="bookmarkURL" class="mb-2 fw-bold">
+                <i class="fa-solid fa-link me-2"></i>Site URL
+            </label>
+            <input type="text" class="form-control is-invalid" id="bookmarkURL" placeholder="Website URL" onkeyup="validate()" required>
+            <div id="urlError" class="form-text text-danger d-none">URL must start with http:// or https://</div>
+          </div>
+          <button type="button" onclick="addBookmark()" class="btn btn-danger ps-4 pe-4 d-grid mx-auto mb-5">Submit</button>
+
+        
+        </form>
+
+      </div>
+      <table id="data" class="table table-bordered text-center">
+        <thead class="table-light">
+          <tr>
+            <th>#</th>
+            <th>Website Name</th>
+            <th>Visit</th>
+            <th>Delete</th>
+          </tr>
+        </thead>
+        <tbody id="bookmarkTable"></tbody>
+      </table>
+    
+ 
+
+    </div>
+    
+
+
+  
+    <script src="../js/index.js"></script>
+</body>
+</html> 
+
+
